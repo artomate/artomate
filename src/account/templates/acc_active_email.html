@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <style>
+         .button {
+         background-color: #1c87c9;
+         border: none;
+         color: white;
+         padding: 20px 34px;
+         text-align: center;
+         text-decoration: none;
+         display: inline-block;
+         font-size: 20px;
+         margin: 4px 2px;
+         cursor: pointer;
+         }
+      </style>
+    </head>
+<body>
+{% autoescape off %}
+<h1>Greetings from Artomate!</h1>
+<h3>Thank you for Registering in Artomate.</h3>
+<p>Your account is created and you're only one step from being able to log in to Website!Simply click on the link below to confirm your account</p>
+<p>Thank you!</p>
+<br>
+<h7>Username = {{user.username}}</h7><br>
+<a href="http://{{ domain }}{% url 'activate' uidb64=uid token=token %}" class="button">Confirm your Account</a>
+{% endautoescape %}
+</body>
+</html>
