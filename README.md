@@ -1,1 +1,1 @@
-# artomate
+# Artomate
